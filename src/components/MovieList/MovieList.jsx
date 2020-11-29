@@ -27,19 +27,16 @@ var listMovies = [
     rate: "4",
   },
 ];
-const items = listMovies.map((item) =>{
-  return ( <div> <MovieCard
+const items = listMovies.map((item) => {
+  return (<MovieCard
     title={item.title}
     description={item.description}
     posterUrl={item.posterUrl}
     rate={item.rate}
-  ></MovieCard></div> )
+  ></MovieCard>)
 });
 function MovieList() {
-
-
- return items;
-
+  return (items);
 }
 
 export default MovieList;
