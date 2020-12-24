@@ -4,9 +4,9 @@ import MovieList from "./components/MovieList/MovieList";
 
 function App() {
   return (
-    <>
+    <div className="MovieList">
       <MovieList></MovieList>
-    </>
+    </div>
   );
 }
 

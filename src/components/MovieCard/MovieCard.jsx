@@ -1,5 +1,6 @@
 import React from "react";
 import "./MovieCard.css";
+import { Button } from 'react-bootstrap';
 
 function MovieCard(props) {
   return (
