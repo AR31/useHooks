@@ -1,28 +1,37 @@
 import React from "react";
 import MovieCard from "../MovieCard/MovieCard";
+import film1 from "../../img/film1.jpg";
+import film2 from "../../img/film2.jpg";
+import film3 from "../../img/film3.jpg";
+import film4 from "../../img/film4.jpg";
+
 
 var listMovies = [
   {
-    title: "title1",
-    description: "description1",
+    title: "My the best compaign win",
+    description: "action movie",
+    imgSrc: film1,
     posterUrl: "http://film1.com",
-    rate: "1",
+    rate: "4",
   },
   {
-    title: "title2",
-    description: "description2",
+    title: "Big business just cut the wrong guys",
+    description: "action movie",
+    imgSrc: film2,
     posterUrl: "http://film2.com",
     rate: "2",
   },
   {
-    title: "title3",
-    description: "description3",
+    title: "Coffee and kareem",
+    description: "action movie",
+    imgSrc: film3,
     posterUrl: "http://film1.com",
     rate: "3",
   },
   {
-    title: "title4",
-    description: "description4",
+    title: "waves",
+    description: "action movie",
+    imgSrc: film4,
     posterUrl: "http://film4.com",
     rate: "4",
   },
@@ -31,6 +40,7 @@ const items = listMovies.map((item) => {
   return (<MovieCard
     title={item.title}
     description={item.description}
+    imgSrc={item.imgSrc}
     posterUrl={item.posterUrl}
     rate={item.rate}
   ></MovieCard>)
