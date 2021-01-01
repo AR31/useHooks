@@ -8,6 +8,7 @@ import film4 from "../../img/film4.jpg";
 
 var listMovies = [
   {
+    id: "film1",
     title: "My the best compaign win",
     description: "action movie",
     imgSrc: film1,
@@ -15,6 +16,7 @@ var listMovies = [
     rate: "4",
   },
   {
+    id: "film2",
     title: "Big business just cut the wrong guys",
     description: "action movie",
     imgSrc: film2,
@@ -22,6 +24,7 @@ var listMovies = [
     rate: "2",
   },
   {
+    id: "film3",
     title: "Coffee and kareem",
     description: "action movie",
     imgSrc: film3,
@@ -29,6 +32,7 @@ var listMovies = [
     rate: "3",
   },
   {
+    id: "film4",
     title: "waves",
     description: "action movie",
     imgSrc: film4,
@@ -37,14 +41,21 @@ var listMovies = [
   },
 ];
 const items = listMovies.map((item) => {
-  return (<MovieCard
-    title={item.title}
-    description={item.description}
-    imgSrc={item.imgSrc}
-    posterUrl={item.posterUrl}
-    rate={item.rate}
-  ></MovieCard>)
+  return (
+    <>
+      <MovieCard
+        id={item.id}
+        title={item.title}
+        description={item.description}
+        imgSrc={item.imgSrc}
+        posterUrl={item.posterUrl}
+        rate={item.rate}
+      ></MovieCard>
+    </>
+  )
 });
+
+
 function MovieList() {
   return (items);
 }

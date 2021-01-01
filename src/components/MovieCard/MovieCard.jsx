@@ -1,21 +1,25 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./MovieCard.css";
-import { Button } from 'react-bootstrap';
 
 function MovieCard(props) {
   return (
-    <div className="card">
-      <div className="container">
+    <div className="col-4">
+      <div className="card">
         <h4>
           <b>{props.title}</b>
         </h4>
         <a href="{props.posterUrl}">url for movie</a>
         <img
           src={props.imgSrc}
-          style={{ width: 300, height: 200 }}
-        ></img>          
-        <p>{props.description}</p>
-        <span>{props.rate}</span>
+          style={{ width: 'auto', height: 200 }}
+        ></img>
+        <p>description: {props.description}</p>
+        <span>rate: {props.rate}</span>
+
+        <Link to={`desc/${props.id}`} className="btn btn-primary" >
+          See more...
+        </Link>
       </div>
     </div>
   );

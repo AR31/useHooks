@@ -1,10 +1,13 @@
 .App {
   text-align: center;
 }
-.MovieList{
-  display: flex;
+.MovieList {
+  background: #080808;
 }
-.titleMovie{
+.titleMovie {
+  color: white;
+}
+.titleMovie {
   display: flex;
   margin: 0 auto;
   font-weight: bold;
