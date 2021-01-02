@@ -6,6 +6,7 @@ class Add extends React.Component {
     super(props);
     this.state = {
       modal: false,
+      id: "",
       title: "",
       img: "",
       desc: "",
@@ -24,20 +25,12 @@ class Add extends React.Component {
     });
   };
 
-  handleAdd = () => {
-    this.props.add({
-      id: Math.random() + "",
-      title: this.state.title,
-      img: this.state.img,
-      desc: this.state.desc,
-    });
-    this.toggle();
-  };
+
 
   render() {
     return (
       <div className="col-4">
-      <button  className="btn btn-outline-primary my-2 my-sm-0" onClick={this.toggle}>ADD Movies</button>
+        <button className="btn btn-outline-primary my-2 my-sm-0" onClick={this.toggle}>ADD Movies</button>
         <Modal
           isOpen={this.state.modal}
           toggle={this.toggle}
@@ -47,8 +40,20 @@ class Add extends React.Component {
           <ModalBody>
             <Form>
               <FormGroup>
+                <Label for="id">id</Label>
+                <Input
+                  required
+                  type="text"
+                  name="id"
+                  id="id"
+                  placeholder="movie id"
+                  onChange={e => this.handleChange(e)}
+                />
+              </FormGroup>
+              <FormGroup>
                 <Label for="title">Title</Label>
                 <Input
+                  required
                   type="text"
                   name="title"
                   id="title"
@@ -69,6 +74,7 @@ class Add extends React.Component {
               <FormGroup>
                 <Label for="description">Description</Label>
                 <Input
+                  required
                   type="textarea"
                   name="desc"
                   id="description"

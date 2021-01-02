@@ -5,7 +5,6 @@ import film2 from "../../img/film2.jpg";
 import film3 from "../../img/film3.jpg";
 import film4 from "../../img/film4.jpg";
 
-
 var listMovies = [
   {
     id: "film1",
@@ -54,8 +53,6 @@ const items = listMovies.map((item) => {
     </>
   )
 });
-
-
 function MovieList() {
   return (items);
 }
